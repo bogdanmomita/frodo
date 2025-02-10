@@ -4,3 +4,4 @@ metadata:
   name: discord-alerts
 resources:
   - deploy.yaml
+  - svc.yaml
