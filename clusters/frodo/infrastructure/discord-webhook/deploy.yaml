@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: discord-alerts
+  namespace: monitoring
+spec:
+  selector:
+    matchLabels:
+      app: discord-alerts
+  template:
+    metadata:
+      labels:
+        app: discord-alerts
+    spec:
+      containers:
+      - name: discord-alerts
+        image: benjojo/alertmanager-discord
+        env:
+        - name: DISCORD_WEBHOOK
+          valueFrom:
+            secretKeyRef:
+              name: discord-webhook-secret
+              key: webhook-url
