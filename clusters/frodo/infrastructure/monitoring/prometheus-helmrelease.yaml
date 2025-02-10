@@ -46,16 +46,17 @@ spec:
     alertmanager:
       fullnameOverride: alertmanager
       enabled: true
-      route:
-        - receiver: 'discord-webhook'
-          repeat_interval: 4h
-          group_by: [ alertname ]
-          group_wait: 1s
-          group_interval: 1s
-      receivers:
-        - name: 'discord-webhook'
-          webhook_configs:
-            - url: 'http://discord-alerts:9094'
+      config:
+        route:
+          - receiver: 'discord-webhook'
+            repeat_interval: 4h
+            group_by: [ alertname ]
+            group_wait: 1s
+            group_interval: 1s
+        receivers:
+          - name: 'discord-webhook'
+            webhook_configs:
+              - url: 'http://discord-alerts:9094'
       ingress:
         enabled: false
     grafana:
