@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+metadata:
+  name: jenkins
+resources:
+  - deploy-jenkins.yaml
+  - svc-jenkins.yaml
+  - sa-jenkins.yaml
+  - ns-jenkins.yaml
+  - volume-jenkins.yaml
+  - jenkins-repo.yaml

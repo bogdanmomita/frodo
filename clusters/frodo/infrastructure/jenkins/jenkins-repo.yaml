@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: jenkins-operator
+  namespace: flux-system
+spec:
+  interval: 5m
+  url: https://github.com/jenkinsci/kubernetes-operator.git
+  ref:
+    branch: master
