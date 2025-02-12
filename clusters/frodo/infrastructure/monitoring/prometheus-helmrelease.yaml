@@ -8,6 +8,7 @@ spec:
   chartRef:
     kind: OCIRepository
     name: kube-prometheus-stack
+    version: '69.2.1'
   install:
     crds: Create
   upgrade:
