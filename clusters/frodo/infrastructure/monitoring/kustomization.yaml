@@ -6,4 +6,3 @@ resources:
   - namespace.yaml
   - prometheus-source.yaml
   - prometheus-helmrelease.yaml
-  - pm-flux.yaml
