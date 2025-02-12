@@ -5,9 +5,12 @@ metadata:
   namespace: monitoring
 spec:
   interval: 5m
-  chartRef:
-    kind: OCIRepository
-    name: kube-prometheus-stack
+  chart:
+    chart: kube-prometheus-stack
+    version: '69.2.1'
+    sourceRef:
+      kind: OCIRepository
+      name: kube-prometheus-stack
   install:
     crds: Create
   upgrade:
