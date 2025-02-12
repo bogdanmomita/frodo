@@ -8,4 +8,3 @@ resources:
   - sa-jenkins.yaml
   - ns-jenkins.yaml
   - volume-jenkins.yaml
-  - jenkins-repo.yaml
