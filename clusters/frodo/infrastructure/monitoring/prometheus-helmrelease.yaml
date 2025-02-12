@@ -12,6 +12,10 @@ spec:
     spec:
       chart: kube-prometheus-stack
       version: '69.2.1'
+    sourceRef:
+      kind: OCIRepository
+      name: prometheus-community
+      namespace: monitoring
   install:
     crds: Create
   upgrade:
