@@ -3,8 +3,8 @@ kind: Kustomization
 metadata:
   name: jenkins
 resources:
-  - deploy-jenkins.yaml
   - svc-jenkins.yaml
-  - sa-jenkins.yaml
   - ns-jenkins.yaml
   - volume-jenkins.yaml
+  - jenkins-repository.yaml
+  - jenkins-release.yaml
