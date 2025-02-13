@@ -14,8 +14,6 @@ spec:
         name: jenkins
         namespace: flux-system
   values:
-    controller:
-      serviceType: NodePort
     persistence:
       enabled: true
       existingClaim: jenkins-nfs-pvc
